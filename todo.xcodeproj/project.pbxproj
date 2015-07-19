@@ -10,9 +10,10 @@
 		635B9AD01B5B6B66008F243A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B9ACF1B5B6B66008F243A /* AppDelegate.swift */; };
 		635B9AD21B5B6B66008F243A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B9AD11B5B6B66008F243A /* ViewController.swift */; };
 		635B9AD51B5B6B66008F243A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635B9AD31B5B6B66008F243A /* Main.storyboard */; };
-		635B9AD71B5B6B66008F243A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635B9AD61B5B6B66008F243A /* Images.xcassets */; };
 		635B9ADA1B5B6B66008F243A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B9AD81B5B6B66008F243A /* LaunchScreen.xib */; };
 		635B9AE61B5B6B66008F243A /* todoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B9AE51B5B6B66008F243A /* todoTests.swift */; };
+		635B9AF21B5B7841008F243A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635B9AF11B5B7841008F243A /* Images.xcassets */; };
+		635B9AF41B5B78E9008F243A /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B9AF31B5B78E9008F243A /* TodoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,11 +32,12 @@
 		635B9ACF1B5B6B66008F243A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		635B9AD11B5B6B66008F243A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		635B9AD41B5B6B66008F243A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		635B9AD61B5B6B66008F243A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		635B9AD91B5B6B66008F243A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		635B9ADF1B5B6B66008F243A /* todoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B9AE41B5B6B66008F243A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635B9AE51B5B6B66008F243A /* todoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoTests.swift; sourceTree = "<group>"; };
+		635B9AF11B5B7841008F243A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		635B9AF31B5B78E9008F243A /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +82,10 @@
 				635B9ACF1B5B6B66008F243A /* AppDelegate.swift */,
 				635B9AD11B5B6B66008F243A /* ViewController.swift */,
 				635B9AD31B5B6B66008F243A /* Main.storyboard */,
-				635B9AD61B5B6B66008F243A /* Images.xcassets */,
 				635B9AD81B5B6B66008F243A /* LaunchScreen.xib */,
+				635B9AF11B5B7841008F243A /* Images.xcassets */,
 				635B9ACD1B5B6B66008F243A /* Supporting Files */,
+				635B9AF31B5B78E9008F243A /* TodoModel.swift */,
 			);
 			path = todo;
 			sourceTree = "<group>";
@@ -192,9 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635B9AF21B5B7841008F243A /* Images.xcassets in Resources */,
 				635B9AD51B5B6B66008F243A /* Main.storyboard in Resources */,
 				635B9ADA1B5B6B66008F243A /* LaunchScreen.xib in Resources */,
-				635B9AD71B5B6B66008F243A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635B9AF41B5B78E9008F243A /* TodoModel.swift in Sources */,
 				635B9AD21B5B6B66008F243A /* ViewController.swift in Sources */,
 				635B9AD01B5B6B66008F243A /* AppDelegate.swift in Sources */,
 			);
