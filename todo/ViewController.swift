@@ -41,11 +41,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
+<<<<<<< Updated upstream
         let cell = self.tableView.dequeueReusableCellWithIdentifier("todoCell") as!  UITableViewCell
+=======
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("todoCell") as!  UITableViewCell?
+>>>>>>> Stashed changes
         var todo = todos[indexPath.row] as TodoModel
-        var image = cell.viewWithTag(101) as! UIImageView
-        var title = cell.viewWithTag(102) as! UILabel
-        var date = cell.viewWithTag(103) as! UILabel
+        var image = cell!.viewWithTag(101) as! UIImageView
+        var title = cell!.viewWithTag(102) as! UILabel
+        var date = cell!.viewWithTag(103) as! UILabel
         image.image = UIImage(named: todo.image)
         title.text = todo.title
         let locale = NSLocale.autoupdatingCurrentLocale()
@@ -54,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         dateFormatter.dateFormat = dateFormat
         date.text = dateFormatter.stringFromDate(todo.date)
 
-        return cell
+        return cell!
         
         
     }
