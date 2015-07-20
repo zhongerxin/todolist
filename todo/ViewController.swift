@@ -23,10 +23,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        todos = [TodoModel(id: "1", image: "child-selected", title: "1.去游乐场", date: dateFromString("2014-11-2")!),
-                TodoModel(id: "2", image: "shopping-cart-selected", title: "2.购物", date: dateFromString("2014-10-2")!),
-            TodoModel(id: "3", image: "phone-selected", title: "3.打电话", date: dateFromString("2015-11-2")!),
-            TodoModel(id: "4", image: "travel-selected", title: "4.去欧洲旅游", date: dateFromString("2015-9-2")!)]
+        todos = []
+        
+        navigationItem.leftBarButtonItem = editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,16 +41,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-            let cell = self.tableView.dequeueReusableCellWithIdentifier("todoCell") as!  UITableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("todoCell") as!  UITableViewCell
         var todo = todos[indexPath.row] as TodoModel
         var image = cell.viewWithTag(101) as! UIImageView
         var title = cell.viewWithTag(102) as! UILabel
         var date = cell.viewWithTag(103) as! UILabel
         image.image = UIImage(named: todo.image)
+        title.text = todo.title
+        let locale = NSLocale.autoupdatingCurrentLocale()
+        let dateFormat = NSDateFormatter.dateFormatFromTemplate("yyyy-MM-dd", options:0, locale:locale)
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        date.text = dateFormatter.stringFromDate(todo.date)
 
         return cell
         
         
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            todos.removeAtIndex(indexPath.row)
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    //edit mode
+    override func setEditing(editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        self.tableView.setEditing(editing, animated: animated)
+    }
+    @IBAction func close(segue:UIStoryboardSegue) {
+        println("closed")
+        tableView.reloadData()
     }
 }
 
