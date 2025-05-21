@@ -1,0 +1,21 @@
+# Placeholder snake_segment.obj
+# A simple cube, same as head.
+# Each face is defined by 4 vertices.
+# Vertices
+v 0.5 0.5 -0.5
+v 0.5 -0.5 -0.5
+v 0.5 0.5 0.5
+v 0.5 -0.5 0.5
+v -0.5 0.5 -0.5
+v -0.5 -0.5 -0.5
+v -0.5 0.5 0.5
+v -0.5 -0.5 0.5
+
+# Faces
+# (Ensure vertices are 1-indexed)
+f 1 2 4 3 # Right face
+f 5 6 8 7 # Left face
+f 1 5 7 3 # Top face
+f 2 6 8 4 # Bottom face
+f 1 5 6 2 # Front face
+f 3 7 8 4 # Back face

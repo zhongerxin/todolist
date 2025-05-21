@@ -1,0 +1,4 @@
+# Placeholder for background_music.ogg
+# This is a text file. In a real scenario, this would be an OGG Vorbis audio file for background music.
+# Ursina will likely not load this as a playable sound and may issue a warning.
+# The game code will reference this path to demonstrate background music integration.

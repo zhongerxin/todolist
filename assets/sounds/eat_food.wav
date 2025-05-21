@@ -1,0 +1,4 @@
+# Placeholder for eat_food.wav
+# This is a text file. In a real scenario, this would be a short WAV audio file.
+# Ursina will likely not load this as a playable sound and may issue a warning.
+# The game code will reference this path to demonstrate sound effect integration.
